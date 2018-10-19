@@ -22,17 +22,17 @@ public class PhotoQuiz {
                 quizWindow.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);   // This will make sure the program exits when you close the window
 
 		// 1. find an image on the internet, and put its URL in a String variable (from your browser, right click on the image, and select “Copy Image Address”)
-
+String Meme="https://www.google.com/url?sa=i&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwiKkcTQvpHeAhXN7VMKHemiA7MQjRx6BAgBEAU&url=http%3A%2F%2Fwww.dorkly.com%2Fpost%2F86919%2Finfinity-wars-blu-ray-is-causing-a-boom-in-hi-def-marvel-memes&psig=AOvVaw38q4bufigba5NnBG0S9egA&ust=1540003498845876";
 		// 2. create a variable of type "Component" that will hold your image
-
+	Component thanos;
 		// 3. use the "createImage()" method below to initialize your Component
-
+		thanos=createImage(Meme);
 		// 4. add the image to the quiz window
-
+		quizWindow.add(thanos);
 		// 5. call the pack() method on the quiz window
-
+quizWindow.pack();
 		// 6. ask a question that relates to the image
-
+String Quest=	JOptionPane.showInputDialog("What trilogy of movies is thanos from?");
 		// 7. print "CORRECT" if the user gave the right answer
 
 		// 8. print "INCORRECT" if the answer is wrong
