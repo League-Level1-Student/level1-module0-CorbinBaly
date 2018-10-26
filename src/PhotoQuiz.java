@@ -1,8 +1,8 @@
+
 /*
  *    Copyright (c) The League of Amazing Programmers 2013-2017
  *    Level 1
  */
-
 
 import java.awt.Component;
 import java.net.MalformedURLException;
@@ -19,36 +19,50 @@ public class PhotoQuiz {
 	public static void main(String[] args) throws Exception {
 		JFrame quizWindow = new JFrame();
 		quizWindow.setVisible(true);
-                quizWindow.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);   // This will make sure the program exits when you close the window
+		quizWindow.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // This will make sure the program exits when you
+																	// close the window
 
-		// 1. find an image on the internet, and put its URL in a String variable (from your browser, right click on the image, and select “Copy Image Address”)
-String Meme="https://www.google.com/url?sa=i&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwiKkcTQvpHeAhXN7VMKHemiA7MQjRx6BAgBEAU&url=http%3A%2F%2Fwww.dorkly.com%2Fpost%2F86919%2Finfinity-wars-blu-ray-is-causing-a-boom-in-hi-def-marvel-memes&psig=AOvVaw38q4bufigba5NnBG0S9egA&ust=1540003498845876";
+		// 1. find an image on the internet, and put its URL in a String variable (from
+		// your browser, right click on the image, and select “Copy Image Address”)
+		String Meme = "https://i.kym-cdn.com/entries/icons/original/000/027/072/thanos_car_2.jpg";
 		// 2. create a variable of type "Component" that will hold your image
-	Component thanos;
+		Component thanoscar;
 		// 3. use the "createImage()" method below to initialize your Component
-		thanos=createImage(Meme);
+		thanoscar = createImage(Meme);
 		// 4. add the image to the quiz window
-		quizWindow.add(thanos);
+		quizWindow.add(thanoscar);
 		// 5. call the pack() method on the quiz window
-quizWindow.pack();
+		quizWindow.pack();
 		// 6. ask a question that relates to the image
-String Quest=	JOptionPane.showInputDialog("What trilogy of movies is thanos from?");
+		String Quest = JOptionPane.showInputDialog("What trilogy of movies is thanos from?");
 		// 7. print "CORRECT" if the user gave the right answer
-
+		if (Quest.equals("Avengers")) {
+			System.out.println("CORRECT");
+		}
 		// 8. print "INCORRECT" if the answer is wrong
-
-		// 9. remove the component from the quiz window (you may not see the effect of this until step 12)
-
+		else {
+			System.out.println("INCORRECT");
+		}
+		// 9. remove the component from the quiz window (you may not see the effect of
+		// this until step 12)
+		quizWindow.remove(thanoscar);
 		// 10. find another image and create it (might take more than one line of code)
-
+		String link = "http://images.pushsquare.com/5930d8cd25871/fortnite-skins-list-all-battle-pass-seasonal-and-special-outfits.900x.jpg";
+		Component orangeJustice;
 		// 11. add the second image to the quiz window
-
+		orangeJustice = createImage(link);
+		quizWindow.add(orangeJustice);
 		// 12. pack the quiz window
-
+		quizWindow.pack();
 		// 13. ask another question
-
+String bopIt=JOptionPane.showInputDialog("What game is this from?");
 		// 14+ check answer, say if correct or incorrect, etc.
-
+	if(bopIt.equalsIgnoreCase("Fortnite")) {
+		System.out.println("CORRECT");
+	}
+	else {
+		System.out.println("INCORRECT");
+	}
 	}
 
 	private static Component createImage(String imageUrl) throws MalformedURLException {
@@ -60,10 +74,6 @@ String Quest=	JOptionPane.showInputDialog("What trilogy of movies is thanos from
 
 	/* OPTIONAL */
 	// *14. add scoring to your quiz
-	// *15. make something happen when mouse enters image (imageComponent.addMouseMotionListener()) 
+	// *15. make something happen when mouse enters image
+	// (imageComponent.addMouseMotionListener())
 }
-
-
-
-
-
