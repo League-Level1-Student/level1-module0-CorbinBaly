@@ -73,7 +73,7 @@ public class BodyPartQuiz {
 				if (guess.equalsIgnoreCase("Jack")) {
 					score = score + 1;
 					JOptionPane.showMessageDialog(null, "Correct!");
-				} else {
+				} else{
 					JOptionPane.showMessageDialog(null, "Incorrect, the answer is Jack");
 				}
 			}

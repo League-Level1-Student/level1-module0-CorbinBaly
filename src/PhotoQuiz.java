@@ -63,7 +63,9 @@ String bopIt=JOptionPane.showInputDialog("What game is this from?");
 	else {
 		System.out.println("INCORRECT");
 	}
+	System.exit(0);
 	}
+	
 
 	private static Component createImage(String imageUrl) throws MalformedURLException {
 		URL url = new URL(imageUrl);
