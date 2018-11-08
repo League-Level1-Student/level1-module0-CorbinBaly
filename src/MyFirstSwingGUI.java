@@ -1,3 +1,4 @@
+
 /*
  *    Copyright (c) The League of Amazing Programmers 2013-2017
  *    Level 1
@@ -32,19 +33,19 @@ public class MyFirstSwingGUI {
 		// 9. Add the JLabel object to the JPanel
 		panel.add(label);
 		// 10. Pack your JFrame.
-
+		frame.pack();
 		// 11. Run your program again. Do you see your message.
-
+		// I don't know, do I?
 		// 12. Use the loadImage method to set the icon of the JLabel object.
-
+		label.setIcon(loadImage());
 		// 13. Re-pack the JFrame object.
-
+		frame.pack();
 		// 14. Run the program one more time. Do you see the image?
 	}
 
 	public static ImageIcon loadImage() {
 		try {
-			return new ImageIcon(ImageIO.read(new MyFirstSwingGUI().getClass().getResourceAsStream("java.png")));
+			return new ImageIcon(ImageIO.read(new MyFirstSwingGUI().getClass().getResourceAsStream("oviewatches.jpg")));
 		} catch (IOException e) {
 
 			return null;
